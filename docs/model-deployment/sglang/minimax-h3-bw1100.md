@@ -135,7 +135,7 @@ Warmup 不能省略，否则首个正式请求会混入 kernel、通信和内存
 - 在线部署：使用 `--warmup-mode server`。Server 会在 ready 前自动执行一次 2-step 请求；warmup 期间 `/health` 可能返回 503。
 - 严格性能测试：使用 `--warmup-mode off`，依次执行 3 次 2-step 短请求；每次等 Server 日志出现 `Pixel data generated successfully` 后再发送下一次。随后第 4 次发送 50-step 正式请求。
 
-下面是 2-step T2VA warmup 请求。执行三次即可：
+下面是 2-step T2VA warmup 请求。执行三次即可(相关doc可从https://developer.sourcefind.cn/codes/modelzoo/minimax-h3 获取)：
 
 ```bash
 curl -sS -X POST "http://127.0.0.1:${PORT}/v1/videos" \
