@@ -109,7 +109,6 @@ export SP_DEGREE=1
 export ULYSSES_DEGREE=1
 ```
 
-`MINIMAX_H3_TORCH_SDPA_BACKEND=auto` 只控制 Video VAE 内部 PyTorch SDPA；DiT 主干由 `--attention-backend fa` 选择 HCU FlashAttention。稳定部署不建议强制 Video VAE Flash。
 
 ## 开启 CacheDiT
 
