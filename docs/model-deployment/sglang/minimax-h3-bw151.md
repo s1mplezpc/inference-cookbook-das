@@ -30,7 +30,6 @@ docker pull harbor.sourcefind.cn:5443/dcu/admin/base/custom:sglang-0.5.15-minima
 
 | 卡数 | 推荐布局 | `NUM_GPUS` | `TP_SIZE` | `SP_DEGREE` | `ULYSSES_DEGREE` | Text Encoder offload | 说明 |
 | ---: | --- | ---: | ---: | ---: | ---: | --- | --- |
-| 1 | 不支持 | 1 | 1 | 1 | 1 | — | 64 GiB 无法稳定容纳完整模型 |
 | 2 | TP2 | 2 | 2 | 1 | 1 | `true` | 只 offload Text Encoder；其余 offload 与 FSDP 关闭 |
 | 4 | TP2 + SP2 | 4 | 2 | 2 | 2 | `false` | 性能最快，但峰值可达 92.55% |
 | 8 | TP2 + SP4 | 8 | 2 | 4 | 4 | `false` | 当前综合性能最佳 |
